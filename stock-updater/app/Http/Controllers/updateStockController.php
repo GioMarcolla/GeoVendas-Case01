@@ -14,11 +14,24 @@ class updateStockController extends Controller
 
     public function updateStock(Request $request)
     {
-        \DB::table('stock_items')->upsert(
-            $request->all(),
-            'id',
-            ['produto', 'cor', 'tamanho', 'deposito', 'data_disponibilidade', 'quantidade']
-        );
+        // decode package into array
+        $full_package = json_decode(json_encode($request->all()), true);
+
+        // Limit upserting to much data and breaking the data pipeline
+        $pakcage_size = 5000;
+
+        // split full_package into smaller chunks
+        for ($ii = 0; $ii < count($full_package); $ii += $pakcage_size) {
+            $chunk = array_slice($full_package, $ii, $pakcage_size);
+
+            // \Log::info($chunk);
+            \DB::table('stock_items')->upsert(
+                $chunk,
+                'id',
+                ['produto', 'cor', 'tamanho', 'deposito', 'data_disponibilidade', 'quantidade']
+            );
+        }
+
 
         return redirect('/');
     }
