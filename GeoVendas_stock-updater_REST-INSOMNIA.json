@@ -1,0 +1,146 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-07-15T02:49:17.375Z",
+  "__export_source": "insomnia.desktop.app:v2023.4.0",
+  "resources": [
+    {
+      "_id": "req_50bc2ff5737e4dbf9bf0a5e9d41b75c7",
+      "parentId": "wrk_248f5a8f035e4820867f131612f2d799",
+      "modified": 1689389075190,
+      "created": 1689379227336,
+      "url": "http://127.0.0.1:8000/api/updateStock",
+      "name": "BaseCase",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "[\n\t{ \n        \"produto\": \"11.01.0568\", \n        \"cor\": \"08\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-06-01\", \n        \"quantidade\": 8 \n\t\t}, { \n        \"produto\": \"11.01.0568\", \n        \"cor\": \"08\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-06-01\", \n        \"quantidade\": 8 \n\t\t}, { \n        \"produto\": \"11.01.0568\", \n        \"cor\": \"08\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-06-01\", \n        \"quantidade\": 8 \n\t\t}, { \n        \"produto\": \"11.01.0568\", \n        \"cor\": \"08\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-06-01\", \n        \"quantidade\": 8 \n\t\t}, { \n        \"produto\": \"11.01.0568\", \n        \"cor\": \"08\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-06-01\", \n        \"quantidade\": 8 \n\t\t}, { \n        \"produto\": \"11.01.0568\", \n        \"cor\": \"08\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-06-01\", \n        \"quantidade\": 8 \n\t\t}\n]"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {},
+      "metaSortKey": -1689379227336,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_248f5a8f035e4820867f131612f2d799",
+      "parentId": null,
+      "modified": 1689389200019,
+      "created": 1689379222471,
+      "name": "CaseTests",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_425dc2be76f249659c87c590be9d582f",
+      "parentId": "wrk_248f5a8f035e4820867f131612f2d799",
+      "modified": 1689388170309,
+      "created": 1689385198876,
+      "url": "http://127.0.0.1:8000/api/updateStock",
+      "name": "CaseWithID",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "[\n\t\t{ \n\t\t    \"id\":\"4\",\n        \"produto\": \"10.01.0419\", \n        \"cor\": \"00\", \n        \"tamanho\": \"P\", \n        \"deposito\": \"DEP1\", \n        \"data_disponibilidade\": \"2023-05-01\", \n        \"quantidade\": 15 \n    }\n]"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {},
+      "metaSortKey": -1689385198876,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_85c9a86841d8481087448edb8d713b8e",
+      "parentId": "wrk_248f5a8f035e4820867f131612f2d799",
+      "modified": 1689388425915,
+      "created": 1689388303446,
+      "url": "http://127.0.0.1:8000/api/updateStock",
+      "name": "BadData",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{ \n\t\"id\":\"4\",\n\t\"produto\": \"10.01.0419\", \n\t\"cor\": \"00\", \n\t\"tamanho\": \"GG\", \n\t\"deposito\": \"DEP1\", \n\t\"data_disponibilidade\": \"2023-05-01\", \n\t\"quantidade\": 15,\n\t\"badField\": \"badValue\"\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {},
+      "metaSortKey": -1689388303446,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_73de04e1f9a949b3892dd4c213bca47fe984bb07",
+      "parentId": "wrk_248f5a8f035e4820867f131612f2d799",
+      "modified": 1689379222476,
+      "created": 1689379222476,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1689379222476,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_73de04e1f9a949b3892dd4c213bca47fe984bb07",
+      "parentId": "wrk_248f5a8f035e4820867f131612f2d799",
+      "modified": 1689389129380,
+      "created": 1689379222479,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "laravel_session",
+          "value": "eyJpdiI6Ildmdm5SWXd1QXhaM1FSNmp3ZDVNNnc9PSIsInZhbHVlIjoiL0x5VWxYWTVOTW9lcEt0ZlRaazNzc1ZVZDNLR3BmUU5GaU5ka0ZFMmNCdkY4OCt2UEhkcENvc0IvSXhrOGphRWxpYi9jQjlPenROZ2VMZEZOcjBGSTdrMHNRZFc4ZVpoQnRrM1ZiVFEvUFA0cUFMbkdxRExaQlZUSEJwdmVSK0kiLCJtYWMiOiIwZjE5YTgyYmU0NDc1YzA5NDk3ZjI2ZTU5YjA4NGM3ZDI2M2RjZWM0ZmMzMjFiODZmZGViY2I2MzY5NjMyOWI4IiwidGFnIjoiIn0%3D",
+          "expires": "2023-07-15T04:45:29.000Z",
+          "maxAge": 7200,
+          "domain": "127.0.0.1",
+          "path": "/",
+          "httpOnly": true,
+          "extensions": ["samesite=lax"],
+          "hostOnly": true,
+          "creation": "2023-07-15T00:00:58.867Z",
+          "lastAccessed": "2023-07-15T02:45:29.380Z",
+          "id": "2902845248236645"
+        },
+        {
+          "key": "XSRF-TOKEN",
+          "value": "eyJpdiI6Iml6THY4NnMzNklvNTl1bGJMenhCWGc9PSIsInZhbHVlIjoidWEwNUdYK0NNa3BYMG9YaW5VQmMxZGtCT1g0S1h4eitpSk12RVptZWJTTCtWL2QxMXhEZUV1Mm4yNGFkZmw0UUtnM1lpYVo4NWNCY2lVN0o3dzE0Z0VYWEpJZDllL0pINXN0cE1jbjFoZ1d0Vk1hN2ZQbjAwbEZYeGdnZHNLeTQiLCJtYWMiOiJiNjFjN2FjMzBlZWIxZDE2MWE5OWFhMGYyZTZkYzdlZGE0Mjk3ZGYwYmE4ZDFjM2I5ODI2MTlkMjdjM2UzY2ViIiwidGFnIjoiIn0%3D",
+          "expires": "2023-07-15T04:45:29.000Z",
+          "maxAge": 7200,
+          "domain": "127.0.0.1",
+          "path": "/",
+          "extensions": ["samesite=lax"],
+          "hostOnly": true,
+          "creation": "2023-07-15T00:13:38.598Z",
+          "lastAccessed": "2023-07-15T02:45:29.380Z",
+          "id": "6143540493486201"
+        }
+      ],
+      "_type": "cookie_jar"
+    }
+  ]
+}
